@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "MaQZdz7HAPFa3jrZ837sgwA2EHwiBMppgY4JFNapvxN/3e8OmUllj/644TYt5NWPX/hu4JaGI9mreR47Et81vw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\randy\\code\\HanhTest\\Regb\\Infrastructure\\Infrastructure.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\randy\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
