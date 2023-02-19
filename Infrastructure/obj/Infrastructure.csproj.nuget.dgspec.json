@@ -161,6 +161,10 @@
             "Microsoft.Extensions.DependencyInjection.abstractions": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.27.0, )"
             }
           },
           "imports": [

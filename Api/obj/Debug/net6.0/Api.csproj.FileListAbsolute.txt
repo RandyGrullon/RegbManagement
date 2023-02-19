@@ -29,3 +29,8 @@ C:\Users\randy\code\HanhTest\Regb\Api\bin\Debug\net6.0\Application.pdb
 C:\Users\randy\code\HanhTest\Regb\Api\bin\Debug\net6.0\Infrastructure.pdb
 C:\Users\randy\code\HanhTest\Regb\Api\bin\Debug\net6.0\Domain.pdb
 C:\Users\randy\code\HanhTest\Regb\Api\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\randy\code\HanhTest\Regb\Api\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\randy\code\HanhTest\Regb\Api\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\randy\code\HanhTest\Regb\Api\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\randy\code\HanhTest\Regb\Api\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\randy\code\HanhTest\Regb\Api\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
