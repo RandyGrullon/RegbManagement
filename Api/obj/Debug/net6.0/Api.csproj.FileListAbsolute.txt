@@ -34,3 +34,9 @@ C:\Users\randy\code\HanhTest\Regb\Api\bin\Debug\net6.0\Microsoft.IdentityModel.J
 C:\Users\randy\code\HanhTest\Regb\Api\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
 C:\Users\randy\code\HanhTest\Regb\Api\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\randy\code\HanhTest\Regb\Api\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\randy\code\HanhTest\Regb\Api\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
+C:\Users\randy\code\HanhTest\Regb\Api\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\randy\code\HanhTest\Regb\Api\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\randy\code\HanhTest\Regb\Api\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\randy\code\HanhTest\Regb\Api\bin\Debug\net6.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\randy\code\HanhTest\Regb\Api\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll

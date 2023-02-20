@@ -4,25 +4,32 @@ using System.Security.Claims;
 using Application.Common.Interfaces.Authentication;
 using Microsoft.IdentityModel.Tokens;
 using Application.Common.Interfaces.Services;
+using Microsoft.Extensions.Options;
 
 namespace Infrastructure.Authentication;
 
 public class JwtTokenGenerator : IJwtTokenGenerator
 {
 
-private readonly IDateTimeProvider _dateTimeProvider;
+    private readonly JwtSettings _jwtSettings;
+    private readonly IDateTimeProvider _dateTimeProvider;
 
-    public JwtTokenGenerator(IDateTimeProvider dateTimeProvider)
+    public JwtTokenGenerator(
+        IDateTimeProvider dateTimeProvider,
+        IOptions<JwtSettings> jwtOptions)
     {
         _dateTimeProvider = dateTimeProvider;
+        _jwtSettings = jwtOptions.Value;
     }
+
+
     public string GenerateToken(Guid userId, string firstName, string lastName)
     {
 
         var signingCredentials = new SigningCredentials(
             new SymmetricSecurityKey(
-                Encoding.UTF8.GetBytes("super-secret-key")),
-                SecurityAlgorithms.HmacSha256);
+                Encoding.UTF8.GetBytes(_jwtSettings.Secret)),
+            SecurityAlgorithms.HmacSha256);
 
         var claims = new[]
         {
@@ -33,8 +40,9 @@ private readonly IDateTimeProvider _dateTimeProvider;
         };
 
         var securityToken = new JwtSecurityToken(
-            issuer: "Regb",
-            expires: _dateTimeProvider.UtcNow.AddMinutes(60),
+            issuer: _jwtSettings.Issuer,
+            audience: _jwtSettings.Audience,
+            expires: _dateTimeProvider.UtcNow.AddMinutes(_jwtSettings.ExpiryMinutes),
             claims: claims,
             signingCredentials: signingCredentials
         );
