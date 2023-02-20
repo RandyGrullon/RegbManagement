@@ -1070,19 +1070,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\randy\\.nuget\\packages\\": {}
+    "C:\\Users\\randy.grullon\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\randy\\code\\HanhTest\\Regb\\Infrastructure\\Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\randy.grullon\\code\\BE-RegbManagement\\Infrastructure\\Infrastructure.csproj",
       "projectName": "Infrastructure",
-      "projectPath": "C:\\Users\\randy\\code\\HanhTest\\Regb\\Infrastructure\\Infrastructure.csproj",
-      "packagesPath": "C:\\Users\\randy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\randy\\code\\HanhTest\\Regb\\Infrastructure\\obj\\",
+      "projectPath": "C:\\Users\\randy.grullon\\code\\BE-RegbManagement\\Infrastructure\\Infrastructure.csproj",
+      "packagesPath": "C:\\Users\\randy.grullon\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\randy.grullon\\code\\BE-RegbManagement\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\randy\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\randy.grullon\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -1094,8 +1094,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\randy\\code\\HanhTest\\Regb\\Application\\Application.csproj": {
-              "projectPath": "C:\\Users\\randy\\code\\HanhTest\\Regb\\Application\\Application.csproj"
+            "C:\\Users\\randy.grullon\\code\\BE-RegbManagement\\Application\\Application.csproj": {
+              "projectPath": "C:\\Users\\randy.grullon\\code\\BE-RegbManagement\\Application\\Application.csproj"
             }
           }
         }

@@ -1,5 +1,7 @@
 using Application.Common.Interfaces.Authentication;
 using Application.Common.Interfaces.Services;
+using Application.Common.Interfaces.Persistence;
+using Infrastructure.Persistence;
 using Infrastructure.Authentication;
 using Infrastructure.Services;
 using Microsoft.Extensions.Configuration;
@@ -18,6 +20,7 @@ public static class DependencyInjection
         services.AddSingleton<IJwtTokenGenerator, JwtTokenGenerator>();
         services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
 
+        services.AddScoped<IUserRepository, UserRepository>();
         return services;
     }
 

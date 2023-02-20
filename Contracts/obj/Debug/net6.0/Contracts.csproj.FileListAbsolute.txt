@@ -10,3 +10,15 @@ C:\Users\randy\code\HanhTest\Regb\Contracts\obj\Debug\net6.0\Contracts.dll
 C:\Users\randy\code\HanhTest\Regb\Contracts\obj\Debug\net6.0\refint\Contracts.dll
 C:\Users\randy\code\HanhTest\Regb\Contracts\obj\Debug\net6.0\Contracts.pdb
 C:\Users\randy\code\HanhTest\Regb\Contracts\obj\Debug\net6.0\ref\Contracts.dll
+C:\Users\randy.grullon\code\BE-RegbManagement\Contracts\bin\Debug\net6.0\Contracts.deps.json
+C:\Users\randy.grullon\code\BE-RegbManagement\Contracts\bin\Debug\net6.0\Contracts.dll
+C:\Users\randy.grullon\code\BE-RegbManagement\Contracts\bin\Debug\net6.0\Contracts.pdb
+C:\Users\randy.grullon\code\BE-RegbManagement\Contracts\obj\Debug\net6.0\Contracts.csproj.AssemblyReference.cache
+C:\Users\randy.grullon\code\BE-RegbManagement\Contracts\obj\Debug\net6.0\Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\randy.grullon\code\BE-RegbManagement\Contracts\obj\Debug\net6.0\Contracts.AssemblyInfoInputs.cache
+C:\Users\randy.grullon\code\BE-RegbManagement\Contracts\obj\Debug\net6.0\Contracts.AssemblyInfo.cs
+C:\Users\randy.grullon\code\BE-RegbManagement\Contracts\obj\Debug\net6.0\Contracts.csproj.CoreCompileInputs.cache
+C:\Users\randy.grullon\code\BE-RegbManagement\Contracts\obj\Debug\net6.0\Contracts.dll
+C:\Users\randy.grullon\code\BE-RegbManagement\Contracts\obj\Debug\net6.0\refint\Contracts.dll
+C:\Users\randy.grullon\code\BE-RegbManagement\Contracts\obj\Debug\net6.0\Contracts.pdb
+C:\Users\randy.grullon\code\BE-RegbManagement\Contracts\obj\Debug\net6.0\ref\Contracts.dll
