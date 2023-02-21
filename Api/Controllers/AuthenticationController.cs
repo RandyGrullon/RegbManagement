@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Contracts.Authentication;
 using Application.Services.Authentication;
+using Api.Filters;
 
 namespace Api.Controllers;
 

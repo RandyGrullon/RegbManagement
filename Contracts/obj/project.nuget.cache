@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VzOk2B3QbVjvS3j9DdWwjaIs8AWPpXGmTsGPJrWbylEsuce8qvSoxhnNXi2onuik2s1e/JEJyIwGuKrN3DlYWQ==",
+  "dgSpecHash": "bnfgHXunLfIJXJKTXlYTdrV6v7cdfNxq2dVMYVbxwOzNZS7AkY2wrqw8ewvIsttDvfwWy//hsyHBUQ04UCAh8Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\randy.grullon\\code\\BE-RegbManagement\\Contracts\\Contracts.csproj",
+  "projectFilePath": "C:\\Users\\randy\\code\\HanhTest\\Regb\\Contracts\\Contracts.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

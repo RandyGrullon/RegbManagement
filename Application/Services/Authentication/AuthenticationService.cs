@@ -21,8 +21,6 @@ public class AuthenticationService : IAuthenticationService
         if(_userRepository.GetUserByEmail(email) is not null){
             throw new Exception("User with given email already exists");
         }
-            
-
         //create user (generate unique ID) & persist to DB
         var user = new User
         {
