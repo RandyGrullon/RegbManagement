@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "ErrorOr/1.2.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/ErrorOr.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/ErrorOr.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.CSharp/4.5.0": {
         "type": "package",
         "compile": {
@@ -359,6 +372,9 @@
       "Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "ErrorOr": "1.2.1"
+        },
         "compile": {
           "bin/placeholder/Domain.dll": {}
         },
@@ -386,6 +402,22 @@
     }
   },
   "libraries": {
+    "ErrorOr/1.2.1": {
+      "sha512": "5xcbQErEPQKq2z/sLwSaFPX3T2G7x4ISX0us0X7jSxXSQT/wlfOOhw4knPUN/GWOf2strhuzdvRA36JViwvu+A==",
+      "type": "package",
+      "path": "erroror/1.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "erroror.1.2.1.nupkg.sha512",
+        "erroror.nuspec",
+        "icon-square.png",
+        "lib/net6.0/ErrorOr.dll",
+        "lib/net6.0/ErrorOr.xml",
+        "lib/netstandard2.0/ErrorOr.dll",
+        "lib/netstandard2.0/ErrorOr.xml"
+      ]
+    },
     "Microsoft.CSharp/4.5.0": {
       "sha512": "kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
       "type": "package",
@@ -1105,19 +1137,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\randy\\.nuget\\packages\\": {}
+    "C:\\Users\\randy.grullon\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\randy\\code\\HanhTest\\Regb\\Api\\Api.csproj",
+      "projectUniqueName": "C:\\Users\\randy.grullon\\code\\BE-RegbManagement\\Api\\Api.csproj",
       "projectName": "Api",
-      "projectPath": "C:\\Users\\randy\\code\\HanhTest\\Regb\\Api\\Api.csproj",
-      "packagesPath": "C:\\Users\\randy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\randy\\code\\HanhTest\\Regb\\Api\\obj\\",
+      "projectPath": "C:\\Users\\randy.grullon\\code\\BE-RegbManagement\\Api\\Api.csproj",
+      "packagesPath": "C:\\Users\\randy.grullon\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\randy.grullon\\code\\BE-RegbManagement\\Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\randy\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\randy.grullon\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -1129,14 +1161,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\randy\\code\\HanhTest\\Regb\\Application\\Application.csproj": {
-              "projectPath": "C:\\Users\\randy\\code\\HanhTest\\Regb\\Application\\Application.csproj"
+            "C:\\Users\\randy.grullon\\code\\BE-RegbManagement\\Application\\Application.csproj": {
+              "projectPath": "C:\\Users\\randy.grullon\\code\\BE-RegbManagement\\Application\\Application.csproj"
             },
-            "C:\\Users\\randy\\code\\HanhTest\\Regb\\Contracts\\Contracts.csproj": {
-              "projectPath": "C:\\Users\\randy\\code\\HanhTest\\Regb\\Contracts\\Contracts.csproj"
+            "C:\\Users\\randy.grullon\\code\\BE-RegbManagement\\Contracts\\Contracts.csproj": {
+              "projectPath": "C:\\Users\\randy.grullon\\code\\BE-RegbManagement\\Contracts\\Contracts.csproj"
             },
-            "C:\\Users\\randy\\code\\HanhTest\\Regb\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\randy\\code\\HanhTest\\Regb\\Infrastructure\\Infrastructure.csproj"
+            "C:\\Users\\randy.grullon\\code\\BE-RegbManagement\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\randy.grullon\\code\\BE-RegbManagement\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }

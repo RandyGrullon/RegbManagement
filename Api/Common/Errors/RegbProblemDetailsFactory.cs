@@ -1,18 +1,18 @@
 using System.Diagnostics;
+using Api.Common.Http;
+using ErrorOr;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.Extensions.Options;
 
-
-namespace Api.Errors;
+namespace Api.Common.Errors;
 
 internal sealed class RegbProblemDetailsFactory : ProblemDetailsFactory
 {
     private readonly ApiBehaviorOptions _options;
 
-    public RegbProblemDetailsFactory(
-        IOptions<ApiBehaviorOptions> options)
+    public RegbProblemDetailsFactory(IOptions<ApiBehaviorOptions> options)
     {
         _options = options?.Value ?? throw new ArgumentNullException(nameof(options));
     }
@@ -23,7 +23,8 @@ internal sealed class RegbProblemDetailsFactory : ProblemDetailsFactory
         string? title = null,
         string? type = null,
         string? detail = null,
-        string? instance = null)
+        string? instance = null
+    )
     {
         statusCode ??= 500;
 
@@ -48,7 +49,8 @@ internal sealed class RegbProblemDetailsFactory : ProblemDetailsFactory
         string? title = null,
         string? type = null,
         string? detail = null,
-        string? instance = null)
+        string? instance = null
+    )
     {
         ArgumentNullException.ThrowIfNull(modelStateDictionary);
 
@@ -73,7 +75,11 @@ internal sealed class RegbProblemDetailsFactory : ProblemDetailsFactory
         return problemDetails;
     }
 
-    private void ApplyProblemDetailsDefaults(HttpContext httpContext, ProblemDetails problemDetails, int statusCode)
+    private void ApplyProblemDetailsDefaults(
+        HttpContext httpContext,
+        ProblemDetails problemDetails,
+        int statusCode
+    )
     {
         problemDetails.Status ??= statusCode;
 
@@ -89,8 +95,11 @@ internal sealed class RegbProblemDetailsFactory : ProblemDetailsFactory
             problemDetails.Extensions["traceId"] = traceId;
         }
 
-        problemDetails.Extensions.Add("customProperty", "customValue");
-
+        var errors = httpContext?.Items[HttpContextItemKeys.Errors] as List<Error>;
+        
+        if (errors is not null)
+        {
+            problemDetails.Extensions.Add("ErrorCodes", errors.Select(x => x.Code));
+        }
     }
 }
-
