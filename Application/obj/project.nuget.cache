@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "fm4Rm/8seUkL7DTQgm2vGH1k/b0QEsPI8xny01CEcguyHgmDRGpdsVPZzs3R/cZ4mWmBLYb6+NXO/eoqL1IiBw==",
+  "dgSpecHash": "xOF1/ftJeNoj/w4iEKgup5cfMimXPxxyy+jcyiefQHnrAVgLQOa9aQZ1vV8xyg81tqf8UI5wUbJRipbTRfWeMw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\randy\\code\\HanhTest\\Regb\\Application\\Application.csproj",
+  "projectFilePath": "C:\\Users\\randy.grullon\\code\\BE-RegbManagement\\Application\\Application.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\randy\\.nuget\\packages\\erroror\\1.2.1\\erroror.1.2.1.nupkg.sha512",
-    "C:\\Users\\randy\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
-    "C:\\Users\\randy\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
-    "C:\\Users\\randy\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.0.0\\mediatr.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
-    "C:\\Users\\randy\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
+    "C:\\Users\\randy.grullon\\.nuget\\packages\\erroror\\1.2.1\\erroror.1.2.1.nupkg.sha512",
+    "C:\\Users\\randy.grullon\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
+    "C:\\Users\\randy.grullon\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\randy.grullon\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.1.0\\mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
+    "C:\\Users\\randy.grullon\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }

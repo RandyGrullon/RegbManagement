@@ -3,7 +3,6 @@ using ErrorOr;
 using Application.Common.Interfaces.Persistence;
 using Application.Common.Interfaces.Authentication;
 using Domain.Entities;
-using System.Diagnostics;
 using Domain.Common.Errors;
 using Application.Authentication.Common;
 
@@ -28,6 +27,7 @@ public class RegisterCommandHandler : IRequestHandler<RegisterCommand, ErrorOr<A
 
     public async Task<ErrorOr<AuthenticationResult>> Handle(RegisterCommand command, CancellationToken cancellationToken)
     {
+        await Task.CompletedTask;
         //Validate the user doenst exist
         if (_userRepository.GetUserByEmail(command.email) is not null)
         {
