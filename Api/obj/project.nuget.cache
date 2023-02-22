@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "BiyQtwgaFMSHu5oEFwOiK7zWmKkgh9TE7Ww2d1r+LmP9/yvN6QwHirOdgIM5DNvZbZepHkbjLwII3Rr8wgUo/Q==",
+  "dgSpecHash": "zCMKdQmV4704LVaEvlAiN741VEu+7U61pnr7rnMC9XMQeQwq84Rp1p6sHcQvKQoIi0mgLR8V+UNhYcEtOMnlqg==",
   "success": true,
   "projectFilePath": "C:\\Users\\randy.grullon\\code\\BE-RegbManagement\\Api\\Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\randy.grullon\\.nuget\\packages\\erroror\\1.2.1\\erroror.1.2.1.nupkg.sha512",
+    "C:\\Users\\randy.grullon\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
+    "C:\\Users\\randy.grullon\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.2.2\\fluentvalidation.aspnetcore.11.2.2.nupkg.sha512",
+    "C:\\Users\\randy.grullon\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.2.1\\fluentvalidation.dependencyinjectionextensions.11.2.1.nupkg.sha512",
     "C:\\Users\\randy.grullon\\.nuget\\packages\\mapster\\7.3.0\\mapster.7.3.0.nupkg.sha512",
     "C:\\Users\\randy.grullon\\.nuget\\packages\\mapster.core\\1.2.0\\mapster.core.1.2.0.nupkg.sha512",
     "C:\\Users\\randy.grullon\\.nuget\\packages\\mapster.dependencyinjection\\1.0.0\\mapster.dependencyinjection.1.0.0.nupkg.sha512",
