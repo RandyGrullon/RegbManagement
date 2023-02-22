@@ -1,6 +1,5 @@
 using Microsoft.Extensions.DependencyInjection;
-using Application.Services.Authentication.Commands;
-using Application.Services.Authentication.Queries;
+using MediatR;
 
 namespace Application;
 
@@ -8,8 +7,7 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddApplication(this IServiceCollection services)
     {
-        services.AddScoped<IAuthenticationCommandService, AuthenticationCommandService>();
-        services.AddScoped<IAuthenticationQueryService, AuthenticationQueryService>();
+        services.AddMediatR(typeof(DependencyInjection).Assembly);
         return services;
     }
 

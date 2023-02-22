@@ -83,3 +83,7 @@ C:\Users\randy.grullon\code\BE-RegbManagement\Api\obj\Debug\net6.0\Api.pdb
 C:\Users\randy.grullon\code\BE-RegbManagement\Api\obj\Debug\net6.0\Api.genruntimeconfig.cache
 C:\Users\randy.grullon\code\BE-RegbManagement\Api\obj\Debug\net6.0\ref\Api.dll
 C:\Users\randy.grullon\code\BE-RegbManagement\Api\bin\Debug\net6.0\ErrorOr.dll
+C:\Users\randy\code\HanhTest\Regb\Api\bin\Debug\net6.0\ErrorOr.dll
+C:\Users\randy\code\HanhTest\Regb\Api\bin\Debug\net6.0\MediatR.dll
+C:\Users\randy\code\HanhTest\Regb\Api\bin\Debug\net6.0\MediatR.Contracts.dll
+C:\Users\randy\code\HanhTest\Regb\Api\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
