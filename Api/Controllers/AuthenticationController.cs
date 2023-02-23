@@ -7,10 +7,12 @@ using Application.Authentication.Commands.Register;
 using Application.Authentication.Queries.Login;
 using Domain.Common.Errors;
 using MapsterMapper;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Api.Controllers;
 
 [Route("auth")]
+[AllowAnonymous]
 public class AuthenticationController : ApiController
 {
     private readonly ISender _mediator;
