@@ -1,6 +1,5 @@
 using MediatR;
 using ErrorOr;
-using Application.Authentication.Commands.Register;
 using FluentValidation;
 
 namespace Application.Authentication.Common.Behaviors;
@@ -31,7 +30,7 @@ public class ValidateBehavior<TRequest, TResponse> :
         }
         var validationResult = await _validator.ValidateAsync(request, cancellationToken);
 
-        if (!validationResult.IsValid)
+        if (validationResult.IsValid)
         {
             return await next();
             // return validationResult.Errors.ToErrorOr<AuthenticationResult>();

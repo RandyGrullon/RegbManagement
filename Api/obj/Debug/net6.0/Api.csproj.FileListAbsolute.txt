@@ -97,3 +97,10 @@ C:\Users\randy.grullon\code\BE-RegbManagement\Api\bin\Debug\net6.0\FluentValidat
 C:\Users\randy.grullon\code\BE-RegbManagement\Api\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
 C:\Users\randy.grullon\code\BE-RegbManagement\Api\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\randy.grullon\code\BE-RegbManagement\Api\obj\Debug\net6.0\Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\randy\code\HanhTest\Regb\Api\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\randy\code\HanhTest\Regb\Api\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+C:\Users\randy\code\HanhTest\Regb\Api\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\randy\code\HanhTest\Regb\Api\bin\Debug\net6.0\Mapster.dll
+C:\Users\randy\code\HanhTest\Regb\Api\bin\Debug\net6.0\Mapster.Core.dll
+C:\Users\randy\code\HanhTest\Regb\Api\bin\Debug\net6.0\Mapster.DependencyInjection.dll
+C:\Users\randy\code\HanhTest\Regb\Api\obj\Debug\net6.0\Api.MvcApplicationPartsAssemblyInfo.cs
