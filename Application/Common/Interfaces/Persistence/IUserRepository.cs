@@ -1,6 +1,7 @@
-using Domain.Entities;
+using Domain.UserAggregate;
 
 namespace Application.Common.Interfaces.Persistence;
+
 public interface IUserRepository
 {
     User? GetUserByEmail(string email);

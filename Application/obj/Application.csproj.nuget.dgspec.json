@@ -120,6 +120,10 @@
             "ErrorOr": {
               "target": "Package",
               "version": "[1.2.1, )"
+            },
+            "ardalis.smartenum": {
+              "target": "Package",
+              "version": "[2.1.0, )"
             }
           },
           "imports": [

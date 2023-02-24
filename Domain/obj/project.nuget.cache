@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "lx88OTP+ut2ZPEDx5OM6VbrwQaUyD76FEgqWjtmiKauD0VabkR9E8TPYKIKOH8cRKBiK0EpweKO0exDW3iIkWQ==",
+  "dgSpecHash": "5j/Kwph326fiaBQQ3cBdawjz7yY/tIfv/4yJb7eWLo6k0in83EsT8d/kJK0IJCFwKUiTl8IDRBdIcsQUDasi8w==",
   "success": true,
   "projectFilePath": "C:\\Users\\randy.grullon\\code\\BE-RegbManagement\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\randy.grullon\\.nuget\\packages\\ardalis.smartenum\\2.1.0\\ardalis.smartenum.2.1.0.nupkg.sha512",
     "C:\\Users\\randy.grullon\\.nuget\\packages\\erroror\\1.2.1\\erroror.1.2.1.nupkg.sha512"
   ],
   "logs": []

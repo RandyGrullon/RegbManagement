@@ -1,15 +1,19 @@
+using System.Text;
+
 using Application.Common.Interfaces.Authentication;
-using Application.Common.Interfaces.Services;
 using Application.Common.Interfaces.Persistence;
-using Infrastructure.Persistence;
+using Application.Common.Interfaces.Services;
 using Infrastructure.Authentication;
+using Infrastructure.Persistence;
+using Infrastructure.Persistence.Repositories;
 using Infrastructure.Services;
+
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
 using Microsoft.Extensions.Options;
-using System.Text;
+using Microsoft.IdentityModel.Tokens;
 
 namespace Infrastructure;
 
@@ -17,20 +21,32 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddInfrastructure(
         this IServiceCollection services,
-        ConfigurationManager configuration
-    )
+        ConfigurationManager configuration)
     {
-        services.AddAuth(configuration);
+        services
+            .AddAuth(configuration)
+            .AddPersistance();
+
         services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
 
-        services.AddScoped<IUserRepository, UserRepository>();
+        return services;
+    }
+
+    public static IServiceCollection AddPersistance(
+        this IServiceCollection services)
+    {
+        services.AddDbContext<RegbDbContext>(options =>
+            options.UseSqlServer("Server=localhost;Database=Regb;User Id=SA;Password=;TrustServerCertificate=true"));
+
+        services.AddScoped<IUserRepository, Persistence.UserRepository>();
+        services.AddScoped<IMenuRepository, Persistence.MenuRepository>();
+
         return services;
     }
 
     public static IServiceCollection AddAuth(
-        this IServiceCollection services,
-        IConfiguration configuration
-    )
+            this IServiceCollection services,
+            ConfigurationManager configuration)
     {
         var jwtSettings = new JwtSettings();
         configuration.Bind(JwtSettings.SectionName, jwtSettings);
@@ -38,23 +54,18 @@ public static class DependencyInjection
         services.AddSingleton(Options.Create(jwtSettings));
         services.AddSingleton<IJwtTokenGenerator, JwtTokenGenerator>();
 
-        services
-            .AddAuthentication(defaultScheme: JwtBearerDefaults.AuthenticationScheme)
-            .AddJwtBearer(
-                options =>
-                    options.TokenValidationParameters = new TokenValidationParameters
-                    {
-                        ValidateIssuer = true,
-                        ValidateAudience = true,
-                        ValidateLifetime = true,
-                        ValidateIssuerSigningKey = true,
-                        ValidIssuer = jwtSettings.Issuer,
-                        ValidAudience = jwtSettings.Audience,
-                        IssuerSigningKey = new SymmetricSecurityKey(
-                            Encoding.UTF8.GetBytes(jwtSettings.Secret)
-                        )
-                    }
-            );
+        services.AddAuthentication(defaultScheme: JwtBearerDefaults.AuthenticationScheme)
+            .AddJwtBearer(options => options.TokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateIssuer = true,
+                ValidateAudience = true,
+                ValidateLifetime = true,
+                ValidateIssuerSigningKey = true,
+                ValidIssuer = jwtSettings.Issuer,
+                ValidAudience = jwtSettings.Audience,
+                IssuerSigningKey = new SymmetricSecurityKey(
+                    Encoding.UTF8.GetBytes(jwtSettings.Secret)),
+            });
 
         return services;
     }

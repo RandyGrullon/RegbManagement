@@ -1,11 +1,12 @@
 using System.Reflection;
-using Microsoft.Extensions.DependencyInjection;
-using MediatR;
-using Application.Authentication.Commands.Register;
-using ErrorOr;
-using Application.Authentication.Common;
-using Application.Authentication.Common.Behaviors;
+
+using Application.Common.Behaviors;
+
 using FluentValidation;
+
+using MediatR;
+
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Application;
 
@@ -17,14 +18,9 @@ public static class DependencyInjection
 
         services.AddScoped(
             typeof(IPipelineBehavior<,>),
-            typeof(ValidateBehavior<,>)
-        );
-
-        services.AddScoped<IValidator<RegisterCommand>, RegisterCommandValidator>();
+            typeof(ValidationBehavior<,>));
 
         services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
-
         return services;
     }
-
 }
