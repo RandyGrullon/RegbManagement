@@ -1,0 +1,49 @@
+version: "2"
+services:
+  api:
+    build:
+      context: ./BE/.
+      dockerfile: Dockerfile
+    volumes:
+      - ./BE/Domain:/app/Domain
+      - ./BE/Infrastructure:/app/Infrastructure
+      - ./BE/Contracts:/app/Contracts
+      - ./BE/Application:/app/Application
+      - ./BE/Api:/app/Api
+    ports:
+      - "81:80"
+    depends_on:
+      - db
+    links:
+      - db
+
+  db:
+    image: postgres:latest
+    restart: always
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=regbdb
+    ports:
+      - "5432:5432"
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "admin@admin.com"
+      PGADMIN_DEFAULT_PASSWORD: "admin"
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+    restart: unless-stopped
+
+  front:
+    build:
+      context: ./FE/.
+      dockerfile: Dockerfile
+    command: npm start
+    volumes:
+      - ./FE/app:/app
+    ports:
+      - "5000:5000"
