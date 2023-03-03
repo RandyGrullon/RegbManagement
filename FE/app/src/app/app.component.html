@@ -5,149 +5,18 @@
   </a>
   <ul class="nav justify-content-end">
     <li class="nav-item">
-      <a class="nav-link active" href="#">Home</a>
+      <a class="nav-link active" href="/">Home</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#">My Foodies</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Log in</a>
+      <a class="nav-link" href="/login">Log in</a>
     </li>
 
   </ul>
 </nav>
 
-<div class="container">
-  <div class="row">
-    <!-- form -->
-    <div class="col-md-4">
-      <div class="card">
-        <div class="card-body">
-          <div class="card-title text-center">
-            <h3>Create Foody</h3>
-          </div>
-          <form>
-            <div class="form-group">
-              <input type="text" [(ngModel)]="selectedMenu.name" name="name" class="form-control" id="name"
-                placeholder="Name">
-            </div>
-            <div class="form-group">
-              <textarea class="form-control" [(ngModel)]="selectedMenu.description" name="description" id="description"
-                rows="3" placeholder="Description"></textarea>
-            </div>
-            <div class="form-group text-center ">
-              <div class="d-flex gap-3 justify-content-between">
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" id="breakfast" name="meal" value="breakfast"
-                    [(ngModel)]="selectedMenu.meal">
-                  <label class="form-check-label" for="breakfast">Breakfast</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" id="lunch" name="meal" value="lunch"
-                    [(ngModel)]="selectedMenu.meal">
-                  <label class="form-check-label" for="lunch">Lunch</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" id="dinner" name="meal" value="dinner"
-                    [(ngModel)]="selectedMenu.meal">
-                  <label class="form-check-label" for="dinner">Dinner</label>
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <input type="date" [(ngModel)]="selectedMenu.createdDateTime" name="date" class="form-control" id="date"
-                placeholder="Date">
-            </div>
-            <div class="form-group">
-              <input type="date" [(ngModel)]="selectedMenu.updatedDateTime" name="date" class="form-control" id="date"
-                placeholder="Date">
-            </div>
-            <div class="text-center pt-3">
-              <button (click)="AddOrEditMenu()" type="submit" class="btn-register">Submit</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-
-    <!-- list -->
-    <div class="col-md-8">
-      <div class="card">
-        <div class="card-body">
-          <div class="card-title text-center">
-            <h3>List of Foody</h3>
-          </div>
-        </div>
-      </div>
-      <ul class="list-group m-0">
-        <!-- creame un ternario  de si es  -->
-        <li *ngFor="let menu of menuArray" class="list-group-item m-0">
-          <div class="row bg-light rounded-xl " >
-            <div class="col-md-3 text-center" [ngSwitch]="menu.meal | lowercase">
-              <img class="photos-meal w-100" *ngSwitchCase="'breakfast'" alt="Breakfast" src="../assets/images/breakfast.jpg" />
-              <img class="photos-meal w-100" *ngSwitchCase="'lunch'" alt="Lunch" src="../assets/images/lunch.jpg" />
-              <img class="photos-meal w-100" *ngSwitchCase="'dinner'" alt="Dinner" src="../assets/images/dinner.jpg" />
-            </div>
+<router-outlet></router-outlet>
 
 
-            <div class="col-md-8">
-              <div class="font-medium">
-                <div class="text-info fs-4">
-                  {{menu.name}}
-                </div>
-                <div class="d-flex gap-3">
-                  <div class="text-secondary">
-
-                    {{
-                    menu.meal
-                    }}
-
-                  </div>
-                  <div class="text-secondary">
-                    {{
-                    menu.createdDateTime | date: 'dd/MM/yyyy'
-
-                    }}
-                  </div>
-                  <div class="text-secondary">
-                    {{
-                    menu.updatedDateTime | date: 'dd/MM/yyyy'
-
-                    }}
-                  </div>
-                </div>
-                <div>
-                  <p class="text-secondary">
-                    {{
-                    menu.description
-                    }}
-                  </p>
-                </div>
-                <div>
-                  <!-- poner en horizontal una lista de comida-->
-                  <div class="d-flex flex-row bd-highlight mb-3">
-                    <div class="p-2 bd-highlight ">
-                      <p class="food-mark">Comida 1</p>
-                    </div>
-                    <div class="p-2 bd-highlight ">
-                      <p class="food-mark">Comida 2</p>
-                    </div>
-                    <div class="p-2 bd-highlight ">
-                      <p class="food-mark">Comida 3</p>
-                    </div>
-                    <div class="p-2 bd-highlight ">
-                      <p class="food-mark">Comida 4</p>
-                    </div>
-                  </div>
-
-
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
