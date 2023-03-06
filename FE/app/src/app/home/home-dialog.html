@@ -1,6 +1,6 @@
 <div class="card">
   <ul mat-dialog-content class="list-group m-0">
-    <li *ngFor="let menu of menuArray" class="list-group-item m-0 menu-section">
+    <li *ngFor="let menu of data" class="list-group-item m-0 menu-section">
       <div class="row bg-light rounded-xl">
         <div class="col-md-3 text-center">
           <img class="photos-meal w-100" *ngSwitchCase="'breakfast'" alt="Breakfast"
@@ -12,16 +12,17 @@
           <div class="font-medium">
             <div class="mt-2">
               <div mat-dialog-title class="text-info fs-4">
+                dsdkfjgbkfjg
                 {{menu.name}}
               </div>
               <div class="text-info fs-6">
-                {{menu.type}}
+                <!-- {{menu.type}} -->
               </div>
             </div>
 
             <div>
               <p class="text-secondary">
-                {{menu.description}}
+                <!-- {{menu.description}} -->
               </p>
             </div>
             <div>
@@ -31,7 +32,7 @@
                   <div class="d-flex flex-row bd-highlight mb-3">
                     <div *ngFor="let item of section.items" class="p-2 bd-highlight">
                       <div class="text-secondary">
-                        {{item.name}}
+                        <!-- {{item.name}} -->
                       </div>
                     </div>
                   </div>
@@ -44,7 +45,12 @@
     </li>
   </ul>
   <div>
-    <button>Close</button>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="onNoClick()"
+      mat-dialog-close
+    >Close</button>
   </div>
 
 </div>

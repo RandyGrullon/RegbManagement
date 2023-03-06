@@ -284,4 +284,8 @@ export class OpenModal {
     public dialogRef: MatDialogRef<OpenModal>,
     @Inject(MAT_DIALOG_DATA) public data: Menu
   ) {}
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
 }
