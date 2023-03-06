@@ -1,0 +1,47 @@
+
+  <div class="card">
+    <ul  mat-dialog-content class="list-group m-0">
+      <li *ngFor="let menu of menuArray" class="list-group-item m-0 menu-section">
+        <div class="row bg-light rounded-xl">
+          <div class="col-md-3 text-center" >
+            <img class="photos-meal w-100" *ngSwitchCase="'breakfast'" alt="Breakfast"
+              src="../assets/images/breakfast.jpg" />
+            <img class="photos-meal w-100" *ngSwitchCase="'lunch'" alt="Lunch" src="../assets/images/lunch.jpg" />
+            <img class="photos-meal w-100" *ngSwitchCase="'dinner'" alt="Dinner" src="../assets/images/dinner.jpg" />
+          </div>
+          <div class="col-md-8">
+            <div class="font-medium">
+              <div class="mt-2">
+                <div mat-dialog-title class="text-info fs-4">
+                  {{menu.name}}
+                </div>
+                <div class="text-info fs-6">
+                  {{menu.type}}
+                </div>
+              </div>
+
+              <div>
+                <p class="text-secondary">
+                  {{menu.description}}
+                </p>
+              </div>
+              <div>
+                <!-- poner en horizontal una lista de comida-->
+                <div class="d-flex flex-row bd-highlight mb-3">
+                  <div *ngFor="let section of menu.sections" class="p-2 bd-highlight">
+                    <div class="d-flex flex-row bd-highlight mb-3">
+                      <div *ngFor="let item of section.items" class="p-2 bd-highlight">
+                        <div class="text-secondary">
+                          {{item.name}}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>

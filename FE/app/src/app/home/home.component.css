@@ -1,0 +1,19 @@
+.menu-section .edit-btn,
+.menu-section .delete-btn,
+.menu-section .select-btn {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out 0.2s;
+}
+
+.menu-section:hover .edit-btn,
+.menu-section:hover .delete-btn,
+.menu-section:hover .select-btn {
+  display: block;
+  opacity: 1;
+  transition-delay: 2s;
+}
+
+.chip-list{
+  width: 100%;
+}

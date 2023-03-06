@@ -1,4 +1,4 @@
-@host=https://localhost:7202
+@host=https://localhost:81
 POST  {{host}}/auth/register
 Content-Type: application/json
 

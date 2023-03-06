@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+import { MaterialExampleModule } from "../../material.module";
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -19,6 +21,7 @@ const appRToutes: Routes = [{ path: 'login', component: LoginComponent }];
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot(appRToutes),
+    MaterialExampleModule
   ],
   providers: [],
   bootstrap: [AppComponent],

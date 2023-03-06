@@ -29,9 +29,6 @@ FROM mcr.microsoft.com/dotnet/aspnet:6.0
 WORKDIR /app
 COPY --from=build-env /app/out .
 
-# Copiar el Api.dll a la carpeta /app
-COPY ./Api/bin/Debug/net6.0/Api.dll /app
-
 # Exponer el puerto utilizado por la aplicación
 EXPOSE 80
 

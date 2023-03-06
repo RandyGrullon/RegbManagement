@@ -5,13 +5,34 @@
       <div class="card">
         <div class="card-body">
           <div class="card-title text-center">
-            <h3>Create Foody</h3>
+            <h3 class="fs-3 fw-bold ">Create Foody</h3>
           </div>
           <form>
             <div class="form-group">
               <input type="text" [(ngModel)]="selectedMenu.name" name="name" class="form-control" id="name"
                 placeholder="Name">
             </div>
+
+
+            <div class="form-group">
+              <mat-form-field class="chip-list" appearance="fill">
+                <mat-label>Favorites Foods</mat-label>
+                <mat-chip-grid #chipGrid aria-label="Enter fruits">
+                  <mat-chip-row *ngFor="let item of itemsArray" (removed)="remove(item)" [editable]="true"
+                    (edited)="edit(item, $event)" [aria-description]="'press enter to edit ' + item.name">
+                    {{item.name}}
+                    <button matChipRemove [attr.aria-label]="'remove ' + item.name">
+                      <mat-icon>cancel</mat-icon>
+                    </button>
+                  </mat-chip-row>
+                  <input placeholder="Nuevo Item" [matChipInputFor]="chipGrid"
+                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+                    (matChipInputTokenEnd)="add($event)" />
+                </mat-chip-grid>
+              </mat-form-field>
+            </div>
+
+
             <div class="form-group">
               <textarea class="form-control" [(ngModel)]="selectedMenu.description" name="description" id="description"
                 rows="3" placeholder="Description"></textarea>
@@ -19,32 +40,24 @@
             <div class="form-group text-center ">
               <div class="d-flex gap-3 justify-content-between">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" id="breakfast" name="meal" value="breakfast"
-                    [(ngModel)]="selectedMenu.meal">
+                  <input class="form-check-input" type="radio" id="breakfast" name="type" value="breakfast"
+                    [(ngModel)]="selectedMenu.type">
                   <label class="form-check-label" for="breakfast">Breakfast</label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" id="lunch" name="meal" value="lunch"
-                    [(ngModel)]="selectedMenu.meal">
+                  <input class="form-check-input" type="radio" id="lunch" name="type" value="lunch"
+                    [(ngModel)]="selectedMenu.type">
                   <label class="form-check-label" for="lunch">Lunch</label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" id="dinner" name="meal" value="dinner"
-                    [(ngModel)]="selectedMenu.meal">
+                  <input class="form-check-input" type="radio" id="dinner" name="type" value="dinner"
+                    [(ngModel)]="selectedMenu.type">
                   <label class="form-check-label" for="dinner">Dinner</label>
                 </div>
               </div>
             </div>
-            <div class="form-group">
-              <input type="date" [(ngModel)]="selectedMenu.createdDateTime" name="createdDateTime" class="form-control"
-                id="createdDateTime" placeholder="Date">
-            </div>
-            <div class="form-group">
-              <input type="date" [(ngModel)]="selectedMenu.updatedDateTime" name="updatedDateTime" class="form-control"
-                id="updatedDateTime" placeholder="Date">
-            </div>
             <div class="text-center pt-3">
-              <button (click)="AddOrEditMenu()" type="submit" class="btn-register">Submit</button>
+              <button (click)="AddMenu()" type="submit" class="btn-register">Submit</button>
             </div>
           </form>
         </div>
@@ -57,14 +70,15 @@
       <div class="card">
         <div class="card-body">
           <div class="card-title text-center">
-            <h3>List of Foody</h3>
+            <h3 class="fs-3 fw-bold ">List of Foody</h3>
           </div>
         </div>
       </div>
       <ul class="list-group m-0">
-        <li *ngFor="let menu of menuArray" class="list-group-item m-0">
-          <div class="row bg-light rounded-xl">
-            <div class="col-md-3 text-center" [ngSwitch]="menu.meal | lowercase">
+        <li  *ngFor="let menu of menuArray" class="list-group-item m-0 menu-section"
+          [ngClass]="{'active': menu === selectedMenu}">
+          <div  class="row bg-light rounded-xl">
+            <div class="col-md-3 text-center" [ngSwitch]="menu.type | lowercase">
               <img class="photos-meal w-100" *ngSwitchCase="'breakfast'" alt="Breakfast"
                 src="../assets/images/breakfast.jpg" />
               <img class="photos-meal w-100" *ngSwitchCase="'lunch'" alt="Lunch" src="../assets/images/lunch.jpg" />
@@ -72,25 +86,15 @@
             </div>
             <div class="col-md-8">
               <div class="font-medium">
-                <div class="text-info fs-4">
-                  {{menu.name}}
-                </div>
-                <div class="d-flex gap-3">
-                  <div class="text-secondary">
-                    {{menu.meal}}
+                <div class="mt-2">
+                  <div class="text-info fs-4">
+                    {{menu.name}}
                   </div>
-                  <div class="text-secondary">
-                    {{
-                    menu.createdDateTime | date: 'dd/MM/yyyy'
+                  <div class="text-info fs-6">
+                    {{menu.type}}
+                  </div>
+                </div>
 
-                    }}
-                  </div>
-                  <div class="text-secondary">
-                    {{
-                    menu.updatedDateTime | date: 'dd/MM/yyyy'
-                    }}
-                  </div>
-                </div>
                 <div>
                   <p class="text-secondary">
                     {{menu.description}}
@@ -99,19 +103,35 @@
                 <div>
                   <!-- poner en horizontal una lista de comida-->
                   <div class="d-flex flex-row bd-highlight mb-3">
-                    <div class="p-2 bd-highlight ">
-                      <p class="food-mark">Comida 1</p>
-                    </div>
-                    <div class="p-2 bd-highlight ">
-                      <p class="food-mark">Comida 2</p>
-                    </div>
-                    <div class="p-2 bd-highlight ">
-                      <p class="food-mark">Comida 3</p>
-                    </div>
-                    <div class="p-2 bd-highlight ">
-                      <p class="food-mark">Comida 4</p>
+                    <div *ngFor="let section of menu.sections" class="p-2 bd-highlight">
+                      <div class="d-flex flex-row bd-highlight mb-3">
+                        <div *ngFor="let item of section.items" class="p-2 bd-highlight">
+                          <div class="d-flex text-center" style="color: white; background-color: #102542; padding:5px;  border-radius: 10px; font-size: 12px;">
+                            {{item.name}}
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-1">
+              <div class="d-flex flex-column bd-highlight mb-3">
+                <div class="p-1 bd-highlight">
+                  <button (click)="EditMenu(menu)" class="btn btn-sm edit-btn">
+                    <img src="../../assets/images/edit.png" alt="" srcset="" style="width: 20px; height: 20px;">
+                  </button>
+                </div>
+                <div class="p-1 bd-highlight">
+                  <button (click)="DeleteMenu(menu)" class="btn  btn-sm delete-btn">
+                    <img src="../../assets/images/delete.png" alt="" srcset="" style="width: 20px; height: 20px;">
+                  </button>
+                </div>
+                <div class="p-1 d-flex justify-content-center  bd-highlight">
+                  <button mat-button (click)="openDialog()" class="btn btn-sm select-btn">
+                    <img src="../../assets/images/ver.png" alt="" srcset="" style="width: 20px; height: 20px;">
+                  </button>
                 </div>
               </div>
             </div>
