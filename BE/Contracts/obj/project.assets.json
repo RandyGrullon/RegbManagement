@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\randy.grullon\\.nuget\\packages\\": {}
+    "C:\\Users\\randy\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\randy.grullon\\code\\RegbManagement\\BE\\Contracts\\Contracts.csproj",
+      "projectUniqueName": "C:\\Users\\randy\\code\\HanhTest\\RegbManagement\\BE\\Contracts\\Contracts.csproj",
       "projectName": "Contracts",
-      "projectPath": "C:\\Users\\randy.grullon\\code\\RegbManagement\\BE\\Contracts\\Contracts.csproj",
-      "packagesPath": "C:\\Users\\randy.grullon\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\randy.grullon\\code\\RegbManagement\\BE\\Contracts\\obj\\",
+      "projectPath": "C:\\Users\\randy\\code\\HanhTest\\RegbManagement\\BE\\Contracts\\Contracts.csproj",
+      "packagesPath": "C:\\Users\\randy\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\randy\\code\\HanhTest\\RegbManagement\\BE\\Contracts\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\randy.grullon\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\randy\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
