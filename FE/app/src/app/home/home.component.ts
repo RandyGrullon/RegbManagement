@@ -2,9 +2,12 @@ import { Component, Inject } from '@angular/core';
 import { Menu } from '../models/Menu/menu';
 import { Items } from '../models/Items/items';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
-import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import {
+  MatDialog,
+  MatDialogRef,
+  MAT_DIALOG_DATA,
+} from '@angular/material/dialog';
 import { MatChipEditedEvent, MatChipInputEvent } from '@angular/material/chips';
-
 
 @Component({
   selector: 'app-home',
@@ -195,7 +198,6 @@ export class HomeComponent {
     },
   ];
 
-
   selectedMenu: Menu = new Menu();
   AddMenu() {
     if (this.selectedMenu.id === 0) {
@@ -264,11 +266,10 @@ export class HomeComponent {
 
   constructor(public dialog: MatDialog) {}
 
-  openDialog() {
-    this.dialog.open(OpenModal, {
-      data: {
-        animal: 'panda',
-      },
+  openDialog(): void {
+    const dialogRef = this.dialog.open(OpenModal, {});
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log('The dialog was closed', result);
     });
   }
 }
@@ -279,7 +280,8 @@ export class HomeComponent {
   styleUrls: ['./home.component.css'],
 })
 export class OpenModal {
-  constructor(@Inject(MAT_DIALOG_DATA) public data: Menu) {
-    console.log(data);
-  }
+  constructor(
+    public dialogRef: MatDialogRef<OpenModal>,
+    @Inject(MAT_DIALOG_DATA) public data: Menu
+  ) {}
 }
