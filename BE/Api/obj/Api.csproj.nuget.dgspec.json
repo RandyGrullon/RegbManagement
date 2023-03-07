@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\randy\\code\\HanhTest\\RegbManagement\\BE\\Api\\Api.csproj": {}
+    "C:\\Users\\randy.grullon\\code\\RegbManagement\\BE\\Api\\Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\randy\\code\\HanhTest\\RegbManagement\\BE\\Api\\Api.csproj": {
+    "C:\\Users\\randy.grullon\\code\\RegbManagement\\BE\\Api\\Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\randy\\code\\HanhTest\\RegbManagement\\BE\\Api\\Api.csproj",
+        "projectUniqueName": "C:\\Users\\randy.grullon\\code\\RegbManagement\\BE\\Api\\Api.csproj",
         "projectName": "Api",
-        "projectPath": "C:\\Users\\randy\\code\\HanhTest\\RegbManagement\\BE\\Api\\Api.csproj",
-        "packagesPath": "C:\\Users\\randy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\randy\\code\\HanhTest\\RegbManagement\\BE\\Api\\obj\\",
+        "projectPath": "C:\\Users\\randy.grullon\\code\\RegbManagement\\BE\\Api\\Api.csproj",
+        "packagesPath": "C:\\Users\\randy.grullon\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\randy.grullon\\code\\RegbManagement\\BE\\Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\randy\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\randy.grullon\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -26,14 +26,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\randy\\code\\HanhTest\\RegbManagement\\BE\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\randy\\code\\HanhTest\\RegbManagement\\BE\\Application\\Application.csproj"
+              "C:\\Users\\randy.grullon\\code\\RegbManagement\\BE\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\randy.grullon\\code\\RegbManagement\\BE\\Application\\Application.csproj"
               },
-              "C:\\Users\\randy\\code\\HanhTest\\RegbManagement\\BE\\Contracts\\Contracts.csproj": {
-                "projectPath": "C:\\Users\\randy\\code\\HanhTest\\RegbManagement\\BE\\Contracts\\Contracts.csproj"
+              "C:\\Users\\randy.grullon\\code\\RegbManagement\\BE\\Contracts\\Contracts.csproj": {
+                "projectPath": "C:\\Users\\randy.grullon\\code\\RegbManagement\\BE\\Contracts\\Contracts.csproj"
               },
-              "C:\\Users\\randy\\code\\HanhTest\\RegbManagement\\BE\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\randy\\code\\HanhTest\\RegbManagement\\BE\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\randy.grullon\\code\\RegbManagement\\BE\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\randy.grullon\\code\\RegbManagement\\BE\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -86,17 +86,17 @@
         }
       }
     },
-    "C:\\Users\\randy\\code\\HanhTest\\RegbManagement\\BE\\Application\\Application.csproj": {
+    "C:\\Users\\randy.grullon\\code\\RegbManagement\\BE\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\randy\\code\\HanhTest\\RegbManagement\\BE\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\randy.grullon\\code\\RegbManagement\\BE\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\randy\\code\\HanhTest\\RegbManagement\\BE\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\randy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\randy\\code\\HanhTest\\RegbManagement\\BE\\Application\\obj\\",
+        "projectPath": "C:\\Users\\randy.grullon\\code\\RegbManagement\\BE\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\randy.grullon\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\randy.grullon\\code\\RegbManagement\\BE\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\randy\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\randy.grullon\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -108,8 +108,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\randy\\code\\HanhTest\\RegbManagement\\BE\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\randy\\code\\HanhTest\\RegbManagement\\BE\\Domain\\Domain.csproj"
+              "C:\\Users\\randy.grullon\\code\\RegbManagement\\BE\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\randy.grullon\\code\\RegbManagement\\BE\\Domain\\Domain.csproj"
               }
             }
           }
@@ -165,17 +165,17 @@
         }
       }
     },
-    "C:\\Users\\randy\\code\\HanhTest\\RegbManagement\\BE\\Contracts\\Contracts.csproj": {
+    "C:\\Users\\randy.grullon\\code\\RegbManagement\\BE\\Contracts\\Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\randy\\code\\HanhTest\\RegbManagement\\BE\\Contracts\\Contracts.csproj",
+        "projectUniqueName": "C:\\Users\\randy.grullon\\code\\RegbManagement\\BE\\Contracts\\Contracts.csproj",
         "projectName": "Contracts",
-        "projectPath": "C:\\Users\\randy\\code\\HanhTest\\RegbManagement\\BE\\Contracts\\Contracts.csproj",
-        "packagesPath": "C:\\Users\\randy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\randy\\code\\HanhTest\\RegbManagement\\BE\\Contracts\\obj\\",
+        "projectPath": "C:\\Users\\randy.grullon\\code\\RegbManagement\\BE\\Contracts\\Contracts.csproj",
+        "packagesPath": "C:\\Users\\randy.grullon\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\randy.grullon\\code\\RegbManagement\\BE\\Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\randy\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\randy.grullon\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -218,17 +218,17 @@
         }
       }
     },
-    "C:\\Users\\randy\\code\\HanhTest\\RegbManagement\\BE\\Domain\\Domain.csproj": {
+    "C:\\Users\\randy.grullon\\code\\RegbManagement\\BE\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\randy\\code\\HanhTest\\RegbManagement\\BE\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\randy.grullon\\code\\RegbManagement\\BE\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\randy\\code\\HanhTest\\RegbManagement\\BE\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\randy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\randy\\code\\HanhTest\\RegbManagement\\BE\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\randy.grullon\\code\\RegbManagement\\BE\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\randy.grullon\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\randy.grullon\\code\\RegbManagement\\BE\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\randy\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\randy.grullon\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -281,17 +281,17 @@
         }
       }
     },
-    "C:\\Users\\randy\\code\\HanhTest\\RegbManagement\\BE\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\randy.grullon\\code\\RegbManagement\\BE\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\randy\\code\\HanhTest\\RegbManagement\\BE\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\randy.grullon\\code\\RegbManagement\\BE\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\randy\\code\\HanhTest\\RegbManagement\\BE\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\randy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\randy\\code\\HanhTest\\RegbManagement\\BE\\Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\randy.grullon\\code\\RegbManagement\\BE\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\randy.grullon\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\randy.grullon\\code\\RegbManagement\\BE\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\randy\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\randy.grullon\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -303,8 +303,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\randy\\code\\HanhTest\\RegbManagement\\BE\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\randy\\code\\HanhTest\\RegbManagement\\BE\\Application\\Application.csproj"
+              "C:\\Users\\randy.grullon\\code\\RegbManagement\\BE\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\randy.grullon\\code\\RegbManagement\\BE\\Application\\Application.csproj"
               }
             }
           }
