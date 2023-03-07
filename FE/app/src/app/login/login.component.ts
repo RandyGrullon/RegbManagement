@@ -8,21 +8,22 @@ import { User } from '../models/User/user';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
-  user: User = new User();
   constructor(private http: HttpClient) {}
+  UserArray: User[] =[];
+  SelectedUser: User = new User();
 
-  SignIn(email: string, password: string) {
+  SignIn() {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
     });
 
     const body = {
-      email: email,
-      password: password,
+      email: this.SelectedUser.email,
+      password: this.SelectedUser.password,
     };
 
     this.http
-      .post('http://localhost:3000/api/auth/login', body, { headers })
+      .post('http://localhost:7202/auth/login', body, { headers })
       .subscribe((data) => {
         console.log(data);
       });
