@@ -4,14 +4,7 @@ services:
     build:
       context: ./BE/.
       dockerfile: Dockerfile
-    command: dotnet watch run --project Api/
-    volumes:
-      - ./BE/Domain:/app/Domain
-      - ./BE/Infrastructure:/app/Infrastructure
-      - ./BE/Contracts:/app/Contracts
-      - ./BE/Application:/app/Application
-      - ./BE/Api:/app/Api
-
+    entrypoint: ["dotnet", "/app/Api.dll"]
     ports:
       - "81:80"
     depends_on:
