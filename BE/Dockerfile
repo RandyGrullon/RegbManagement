@@ -1,36 +1,30 @@
-# Establecer la imagen base
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build-env
+# Use the .NET Core SDK as the base image
+FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
 
-# Establecer el directorio de trabajo
+# Set the working directory
 WORKDIR /app
 
-# Restaurar los paquetes NuGet para cada proyecto
-COPY Domain/*.csproj ./Domain/
-RUN dotnet restore ./Domain/*.csproj
-
-COPY Infrastructure/*.csproj ./Infrastructure/
-RUN dotnet restore ./Infrastructure/*.csproj
-
-COPY Contracts/*.csproj ./Contracts/
-RUN dotnet restore ./Contracts/*.csproj
-
-COPY Application/*.csproj ./Application/
-RUN dotnet restore ./Application/*.csproj
-
-COPY Api/*.csproj ./Api/
-RUN dotnet restore ./Api/*.csproj
-
-# Copiar todo el código fuente y construir la aplicación
-COPY . ./
-RUN dotnet publish -c Release -o out
-
-# Establecer la imagen base para la aplicación en sí
-FROM mcr.microsoft.com/dotnet/aspnet:6.0
-WORKDIR /app
-COPY --from=build-env /app/out .
-
-# Exponer el puerto utilizado por la aplicación
 EXPOSE 80
+EXPOSE 443
+# Copy the solution file and restore dependencies
 
-# Iniciar la aplicación
-ENTRYPOINT ["dotnet", "Api.dll"]
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+WORKDIR /src
+COPY *.sln .
+COPY ./Infrastructure/*.csproj ./Infrastructure/
+COPY ./Api/*.csproj ./Api/
+COPY ./Domain/*.csproj ./Domain/
+COPY ./Application/*.csproj ./Application/
+COPY ./Contracts/*.csproj ./Contracts/
+RUN dotnet restore
+
+# Copy the rest of the source code and build the application
+COPY . .
+WORKDIR /src/Api
+RUN dotnet publish -c Release -o /app/out
+
+# Build the runtime image
+FROM base AS final
+
+WORKDIR /app
+COPY --from=build /app/out ./
